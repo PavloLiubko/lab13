@@ -1,0 +1,72 @@
+#include <iostream> 
+
+using namespace std;
+
+int main() {
+
+    int n, m;
+	cout << "Введіть кількість стовпчиків у матриці:";
+	cin >> n;
+	cout << endl;
+	cout << "Введіть кількість рядків у матриці:";
+	cin >> m;
+	cout << endl;
+	
+	int A[n][m];
+
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			cout << "Введіть якесь значення для елементу матриці:";
+			cin >> A[i][j];			
+}
+}
+	cout << "Наша матриця:\n";
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+		cout << A[i][j];
+
+}
+        cout << endl;
+}
+
+    int biggest_i, biggest_j;
+	int biggest = A[0][0];
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			if (biggest < A[i][j]) {
+				biggest = A[i][j];
+}			
+}
+}
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			if (A[i][j] == biggest) {
+				biggest_i = i;
+				biggest_j = j;
+}		
+}
+}
+
+    cout << "Найбільший елемент матриці = " << biggest << " і його індекси: " << biggest_i << " та " << biggest_j << endl;
+
+    int smallest_i, smallest_j;
+	int smallest = A[0][0];
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			if (smallest > A[i][j]) {
+				smallest = A[i][j];
+}			
+}
+}
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			if (A[i][j] == smallest) {
+				smallest_i = i;
+				smallest_j = j;
+}		
+}
+}
+    cout << "Найменший елемент матриці = " << smallest << " і його індекси: " << smallest_i << " та " << smallest_j;
+   
+	return 0;
+}
