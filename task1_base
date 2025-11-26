@@ -1,0 +1,49 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	
+	int n, m;
+	cout << "Введіть кількість стовпців матриці:";
+	cin >> n;
+	cout << endl;
+	cout << "Введіть кількість рядків матриці:";
+	cin >> m;
+	cout << endl;
+	
+	int A[n][m];
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			A[i][j] = j + 1;
+}
+}
+
+	cout << endl << "Елементи матриці:\n"; 
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+				cout << A[i][j];
+		
+}
+    cout << endl;
+}
+
+	cout << "Елементи  розташовані на головній діагоналі: ";
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			if (i == j) {
+				cout << A[i][j];
+}
+}
+}
+	cout << "\n Елементи першого стовпчика: ";
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			if (j == 0) {
+				cout << A[i][j];
+}
+}
+}
+
+	return 0;
+}
