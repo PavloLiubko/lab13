@@ -1,0 +1,42 @@
+#include <iostream> 
+#include <algorithm>
+using namespace std;
+
+int main() {
+
+	int n,m;	
+	cout << "Введіть кількість стовпчиків матриці:";
+	cin >> n;
+	cout << endl << "Введіть кількість рядків матриці:";
+	cin >> m;
+	
+	int A[n][m];
+
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++) {
+			cout << "Введіть якийсь елемент для масиву:";
+			cin >> A[i][j];
+}	
+}
+    cout << "Наша матриця: \n";
+    for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++) {
+            cout << A[i][j];
+}	
+            cout << endl;
+}
+	
+	int maximums[n];
+	for ( int i = 0; i < n; i++ ) {
+		maximums[i] = *max_element( A[i], A[i] + n );
+}
+
+	int sum = 0;
+	for ( int i = 0; i < n; i++ ) {
+		sum += maximums[i];
+}
+
+	cout << endl << "Сума найбільших елементів рядків: " << sum;
+
+	return 0;
+}
