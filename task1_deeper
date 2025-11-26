@@ -1,0 +1,64 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	
+	int n, m;
+	cout << "Введіть кількість стовпчиків у матрицях А та В:";
+	cin >> n;
+	cout << endl;
+	cout << "Введіть кількість рядків у матрицях А та В:";
+	cin >> m;
+	cout << endl;
+
+	int A[n][m];
+	int B[n][m];
+
+	for (int i = 0; i < n; i++ ) {
+		for (int j = 0; j < m; j++ ){
+			cout << "Введіть якесь значення для матриці А:";
+			cin >> A[i][j];
+}
+}
+
+	for (int i = 0; i < n; i++ ) {
+		for (int j = 0; j < m; j++ ){
+			cout << "Введіть якесь значення для матриці B:";
+			cin >> B[i][j];
+}
+}
+	
+	cout << endl << "Наша матриця А: \n";
+	for (int i = 0; i < n; i++ ) {
+		for (int j = 0; j < m; j++ ){
+                cout << A[i][j];
+}
+                cout << endl;
+}
+
+	cout << endl << "Наша матриця B: \n";
+	for (int i = 0; i < n; i++ ) {
+		for (int j = 0; j < m; j++ ){
+            cout << B[i][j];
+}
+            cout << endl;
+}
+	int C[n][m];
+	for (int i = 0; i < n; i++ ) {
+		for (int j = 0; j < m; j++ ){
+			C[i][j] = A[i][j] + B[i][j];
+}
+}
+
+	cout << endl << "Наша матриця C: \n";
+	for (int i = 0; i < n; i++ ) {
+		for (int j = 0; j < m; j++ ){
+                cout << C[i][j];
+}
+                cout << endl;
+}
+		
+
+	return 0;
+}
